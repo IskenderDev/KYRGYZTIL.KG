@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 420" role="img" aria-labelledby="title desc">
+  <title id="title">Тил саясаты</title>
+  <desc id="desc">Stylized language policy document illustration</desc>
+  <rect width="640" height="420" rx="32" fill="#EAF2FB"/>
+  <rect x="168" y="54" width="304" height="306" rx="22" fill="#fff" stroke="#124A8C" stroke-width="8"/>
+  <path d="M220 120h200M220 166h148M220 212h200M220 258h126" stroke="#111827" stroke-width="11" stroke-linecap="round" opacity=".55"/>
+  <circle cx="454" cy="288" r="54" fill="#EF2B24"/>
+  <path d="M430 288l16 16 34-42" fill="none" stroke="#fff" stroke-width="11" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M134 112l28-28 28 28M506 86l38 20-38 20" fill="none" stroke="#0B8AC6" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

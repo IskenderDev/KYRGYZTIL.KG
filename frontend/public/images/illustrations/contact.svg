@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 420" role="img" aria-labelledby="title desc">
+  <title id="title">Байланыш</title>
+  <desc id="desc">Stylized contact and support illustration</desc>
+  <rect width="640" height="420" rx="32" fill="#F7FAFC"/>
+  <rect x="108" y="88" width="270" height="178" rx="28" fill="#fff" stroke="#124A8C" stroke-width="8"/>
+  <path d="M158 148h170M158 190h126" stroke="#124A8C" stroke-width="12" stroke-linecap="round"/>
+  <path d="M192 266l-46 54 102-54" fill="#fff" stroke="#124A8C" stroke-width="8" stroke-linejoin="round"/>
+  <rect x="316" y="164" width="216" height="138" rx="28" fill="#EF2B24"/>
+  <path d="M362 220h124M362 258h86" stroke="#fff" stroke-width="12" stroke-linecap="round"/>
+  <circle cx="452" cy="114" r="38" fill="#0B8AC6"/>
+  <path d="M434 114l13 13 26-30" fill="none" stroke="#fff" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

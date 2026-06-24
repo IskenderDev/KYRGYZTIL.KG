@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 420" role="img" aria-labelledby="title desc">
+  <title id="title">Окуу борбору</title>
+  <desc id="desc">Stylized learning materials illustration</desc>
+  <rect width="640" height="420" rx="32" fill="#EAF2FB"/>
+  <path d="M68 314h504" stroke="#124A8C" stroke-width="10" stroke-linecap="round" opacity=".16"/>
+  <rect x="108" y="84" width="188" height="230" rx="20" fill="#fff" stroke="#124A8C" stroke-width="8"/>
+  <rect x="344" y="84" width="188" height="230" rx="20" fill="#fff" stroke="#124A8C" stroke-width="8"/>
+  <path d="M296 98c-48-16-92-13-148 4v188c56-18 100-20 148-4V98Z" fill="#fff"/>
+  <path d="M344 98c48-16 92-13 148 4v188c-56-18-100-20-148-4V98Z" fill="#fff"/>
+  <path d="M166 150h86M166 188h96M166 226h70" stroke="#124A8C" stroke-width="12" stroke-linecap="round"/>
+  <path d="M388 150h74M388 188h92M388 226h62" stroke="#EF2B24" stroke-width="12" stroke-linecap="round"/>
+  <circle cx="320" cy="302" r="42" fill="#EF2B24"/>
+  <path d="M301 302l13 13 29-32" fill="none" stroke="#fff" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M124 78l36-34 20 42M510 64l32 36-48 10" fill="none" stroke="#0B8AC6" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

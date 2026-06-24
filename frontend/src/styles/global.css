@@ -1,0 +1,136 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color: #111827;
+  background: #ffffff;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background:
+    linear-gradient(180deg, rgba(234, 242, 251, 0.88) 0, rgba(255, 255, 255, 0) 420px),
+    #ffffff;
+  font-family:
+    Manrope,
+    Inter,
+    "Noto Sans",
+    "Golos Text",
+    system-ui,
+    sans-serif;
+}
+
+img,
+svg {
+  max-width: 100%;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+::selection {
+  background: #124a8c;
+  color: #ffffff;
+}
+
+.focus-ring {
+  @apply focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand;
+}
+
+.ornament-line {
+  background-image:
+    linear-gradient(90deg, transparent 0 12px, rgba(18, 74, 140, 0.2) 12px 14px, transparent 14px 26px),
+    linear-gradient(90deg, rgba(18, 74, 140, 0.82), rgba(18, 74, 140, 0.82));
+  background-position:
+    0 0,
+    0 100%;
+  background-size:
+    28px 6px,
+    100% 1px;
+  background-repeat: repeat-x, no-repeat;
+}
+
+.editorial-pattern {
+  background-image:
+    linear-gradient(135deg, rgba(18, 74, 140, 0.12) 25%, transparent 25%),
+    linear-gradient(225deg, rgba(18, 74, 140, 0.12) 25%, transparent 25%),
+    linear-gradient(45deg, rgba(17, 24, 39, 0.08) 25%, transparent 25%),
+    linear-gradient(315deg, rgba(17, 24, 39, 0.08) 25%, #f5f7fa 25%);
+  background-position:
+    10px 0,
+    10px 0,
+    0 0,
+    0 0;
+  background-size: 20px 20px;
+}
+
+.learning-pattern {
+  background-image:
+    linear-gradient(90deg, rgba(18, 74, 140, 0.08) 1px, transparent 1px),
+    linear-gradient(0deg, rgba(18, 74, 140, 0.08) 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+
+.brand-radial {
+  background:
+    linear-gradient(135deg, rgba(234, 242, 251, 0.95) 0 34%, transparent 34% 100%),
+    linear-gradient(315deg, rgba(239, 43, 36, 0.11) 0 24%, transparent 24% 100%),
+    linear-gradient(180deg, #ffffff 0%, #f7fbff 100%);
+}
+
+.rich-text {
+  @apply text-[17px] leading-8 text-ink-soft;
+}
+
+.rich-text > * + * {
+  margin-top: 1rem;
+}
+
+.rich-text h2,
+.rich-text h3,
+.rich-text h4 {
+  @apply font-semibold text-ink;
+}
+
+.rich-text h2 {
+  @apply mt-8 text-2xl;
+}
+
+.rich-text h3 {
+  @apply mt-6 text-xl;
+}
+
+.rich-text a {
+  @apply font-medium text-brand underline underline-offset-4 hover:text-brand-hover;
+}
+
+.rich-text ul,
+.rich-text ol {
+  @apply pl-6;
+}
+
+.rich-text ul {
+  @apply list-disc;
+}
+
+.rich-text ol {
+  @apply list-decimal;
+}
+
+.rich-text blockquote {
+  @apply border-l-4 border-brand bg-brand-light px-5 py-3 text-ink;
+}
