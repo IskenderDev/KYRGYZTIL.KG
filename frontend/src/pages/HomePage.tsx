@@ -118,9 +118,14 @@ export default function HomePage() {
   }
 
   const summary = query.data;
-  const newspaper = summary.newspapers[0];
-  const podcast = summary.podcasts[0];
-  const video = summary.videos[0];
+  const news = Array.isArray(summary.news) ? summary.news : [];
+  const newspapers = Array.isArray(summary.newspapers) ? summary.newspapers : [];
+  const lessons = Array.isArray(summary.lessons) ? summary.lessons : [];
+  const podcasts = Array.isArray(summary.podcasts) ? summary.podcasts : [];
+  const videos = Array.isArray(summary.videos) ? summary.videos : [];
+  const newspaper = newspapers[0];
+  const podcast = podcasts[0];
+  const video = videos[0];
 
   return (
     <>
@@ -254,11 +259,11 @@ export default function HomePage() {
               Баарын көрүү
             </ButtonLink>
           </div>
-          {summary.news.length > 0 ? (
+          {news.length > 0 ? (
             <div className="grid gap-5 lg:grid-cols-[1.25fr_0.75fr]">
-              <NewsCard item={summary.news[0]} featured />
+              <NewsCard item={news[0]} featured />
               <div className="grid gap-5">
-                {summary.news.slice(1, 4).map((item) => (
+                {news.slice(1, 4).map((item) => (
                   <NewsCard key={item.id} item={item} />
                 ))}
               </div>
@@ -308,9 +313,9 @@ export default function HomePage() {
               Бардык материалдар
             </ButtonLink>
           </div>
-          {summary.lessons.length > 0 ? (
+          {lessons.length > 0 ? (
             <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-4">
-              {summary.lessons.map((item) => (
+              {lessons.map((item) => (
                 <LessonCard key={item.id} item={item} />
               ))}
             </div>

@@ -44,6 +44,16 @@ npm run build
 
 Сборка создаётся в `frontend/dist/`.
 
+### Vercel
+
+На Vercel укажите production-переменную `VITE_API_BASE_URL` с полным адресом backend API, например:
+
+```bash
+VITE_API_BASE_URL=https://api.example.com/api/v1
+```
+
+Если backend и frontend обслуживаются с разных доменов, добавьте домен frontend в `CORS_ALLOWED_ORIGINS` на backend. Для media-файлов также можно задать `VITE_MEDIA_BASE_URL`.
+
 ## Реальные backend endpoint
 
 Frontend подключён к фактическим endpoint Django REST Framework:

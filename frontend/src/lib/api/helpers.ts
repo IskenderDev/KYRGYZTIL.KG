@@ -3,6 +3,37 @@ import type { AxiosRequestConfig } from "axios";
 import { apiClient } from "./client";
 import type { PaginatedResponse, SearchParams } from "../../types/api";
 
+function isRecord(value: unknown): value is Record<string, unknown> {
+  return typeof value === "object" && value !== null && !Array.isArray(value);
+}
+
+function isNullableString(value: unknown): value is string | null {
+  return typeof value === "string" || value === null;
+}
+
+function isPaginatedResponse<T>(value: unknown): value is PaginatedResponse<T> {
+  return (
+    isRecord(value) &&
+    typeof value.count === "number" &&
+    isNullableString(value.next) &&
+    isNullableString(value.previous) &&
+    Array.isArray(value.results)
+  );
+}
+
+function assertPaginatedResponse<T>(
+  value: unknown,
+  endpoint: string
+): PaginatedResponse<T> {
+  if (isPaginatedResponse<T>(value)) {
+    return value;
+  }
+
+  throw new Error(
+    `Invalid API response for ${endpoint}. Check VITE_API_BASE_URL.`
+  );
+}
+
 export function cleanParams(params?: object) {
   const cleaned: Record<string, unknown> = {};
 
@@ -19,11 +50,11 @@ export async function getList<T>(
   endpoint: string,
   params?: SearchParams | Record<string, unknown>
 ) {
-  const response = await apiClient.get<PaginatedResponse<T>>(endpoint, {
+  const response = await apiClient.get<unknown>(endpoint, {
     params: cleanParams(params)
   });
 
-  return response.data;
+  return assertPaginatedResponse<T>(response.data, endpoint);
 }
 
 export async function getDetail<T>(endpoint: string, slug: string) {
