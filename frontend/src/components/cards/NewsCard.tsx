@@ -30,10 +30,12 @@ export function NewsCard({ item, featured = false }: NewsCardProps) {
           </Link>
         </h2>
         {item.excerpt ? <p className="mt-3 line-clamp-3 text-sm leading-6 text-ink-soft">{item.excerpt}</p> : null}
-        <span className="mt-auto inline-flex items-center gap-2 pt-5 text-sm font-semibold text-brand">
+        <Link to={`/news/${item.slug}`}>
+        <span className="mt-auto inline-flex items-center gap-2 pt-5 text-sm font-semibold text-brand" >
           Окуу
           <ArrowRight aria-hidden className="h-4 w-4 transition-transform group-hover:translate-x-1" />
         </span>
+        </Link>
       </div>
     </Card>
   );

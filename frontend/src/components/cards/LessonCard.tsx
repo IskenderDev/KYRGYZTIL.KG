@@ -36,13 +36,22 @@ export function LessonCard({ item }: LessonCardProps) {
             {item.title}
           </Link>
         </h2>
-        {item.excerpt ? <p className="mt-3 line-clamp-3 text-sm leading-6 text-ink-soft">{item.excerpt}</p> : null}
+        {item.excerpt ? (
+          <p className="mt-3 line-clamp-3 text-sm leading-6 text-ink-soft">
+            {item.excerpt}
+          </p>
+        ) : null}
         <div className="mt-auto pt-5">
           <ContentMeta date={item.published_at} />
-          <span className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-brand">
-            Өтүү
-            <ArrowRight aria-hidden className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-          </span>
+          <Link to={`/learn/${item.slug}`}>
+            <span className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-brand">
+              Өтүү
+              <ArrowRight
+                aria-hidden
+                className="h-4 w-4 transition-transform group-hover:translate-x-1"
+              />
+            </span>
+          </Link>
         </div>
       </div>
     </Card>
