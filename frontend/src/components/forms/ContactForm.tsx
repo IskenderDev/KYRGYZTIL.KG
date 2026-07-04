@@ -45,6 +45,7 @@ export function ContactForm() {
       <div className="grid gap-5 sm:grid-cols-2">
         <Input
           label="Телефон"
+          type="tel"
           error={form.formState.errors.phone?.message || apiError?.fields.phone?.[0]}
           {...form.register("phone")}
         />
