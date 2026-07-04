@@ -17,45 +17,45 @@ export const mockHomeSummary: HomeSummary = {
       created_at: now,
       updated_at: now
     },
-    {
-      id: 9002,
-      title: "Тил маданиятын өнүктүрүү боюнча демилгелер",
-      slug: "demo-news-language-culture",
-      excerpt:
-        "Коомдук иш-чаралар, маектер жана тилди күнүмдүк колдонуу боюнча сунуштар бир платформада топтолот.",
-      content: "",
-      cover_image: null,
-      is_published: true,
-      published_at: "2026-01-12T10:30:00+06:00",
-      created_at: now,
-      updated_at: now
-    },
-    {
-      id: 9003,
-      title: "Мугалимдер үчүн методикалык колдоо",
-      slug: "demo-news-teacher-support",
-      excerpt:
-        "Сабак планы, көнүгүүлөр жана класста колдонууга ылайыктуу мисалдар демо режимде көрсөтүлөт.",
-      content: "",
-      cover_image: null,
-      is_published: true,
-      published_at: "2026-01-09T14:15:00+06:00",
-      created_at: now,
-      updated_at: now
-    },
-    {
-      id: 9004,
-      title: "Медиа бөлүмүндө подкаст жана видео үлгүлөрү",
-      slug: "demo-news-media-examples",
-      excerpt:
-        "Колдонуучу backend иштебей турган учурда да порталдын негизги көрүнүшүн алдын ала көрө алат.",
-      content: "",
-      cover_image: null,
-      is_published: true,
-      published_at: "2026-01-05T11:00:00+06:00",
-      created_at: now,
-      updated_at: now
-    }
+    // {
+    //   id: 9002,
+    //   title: "Тил маданиятын өнүктүрүү боюнча демилгелер",
+    //   slug: "demo-news-language-culture",
+    //   excerpt:
+    //     "Коомдук иш-чаралар, маектер жана тилди күнүмдүк колдонуу боюнча сунуштар бир платформада топтолот.",
+    //   content: "",
+    //   cover_image: null,
+    //   is_published: true,
+    //   published_at: "2026-01-12T10:30:00+06:00",
+    //   created_at: now,
+    //   updated_at: now
+    // },
+    // {
+    //   id: 9003,
+    //   title: "Мугалимдер үчүн методикалык колдоо",
+    //   slug: "demo-news-teacher-support",
+    //   excerpt:
+    //     "Сабак планы, көнүгүүлөр жана класста колдонууга ылайыктуу мисалдар демо режимде көрсөтүлөт.",
+    //   content: "",
+    //   cover_image: null,
+    //   is_published: true,
+    //   published_at: "2026-01-09T14:15:00+06:00",
+    //   created_at: now,
+    //   updated_at: now
+    // },
+    // {
+    //   id: 9004,
+    //   title: "Медиа бөлүмүндө подкаст жана видео үлгүлөрү",
+    //   slug: "demo-news-media-examples",
+    //   excerpt:
+    //     "Колдонуучу backend иштебей турган учурда да порталдын негизги көрүнүшүн алдын ала көрө алат.",
+    //   content: "",
+    //   cover_image: null,
+    //   is_published: true,
+    //   published_at: "2026-01-05T11:00:00+06:00",
+    //   created_at: now,
+    //   updated_at: now
+    // }
   ],
   newspapers: [
     {
@@ -89,51 +89,51 @@ export const mockHomeSummary: HomeSummary = {
       created_at: now,
       updated_at: now
     },
-    {
-      id: 9202,
-      title: "Орфография: көп колдонулган эрежелер",
-      slug: "demo-lesson-orthography",
-      material_type: "article",
-      excerpt:
-        "Жазууда көп кездешкен суроолорго жөнөкөй жооптор жана мисалдар.",
-      content: "",
-      cover_image: null,
-      attachment: null,
-      is_published: true,
-      published_at: "2026-01-11T12:00:00+06:00",
-      created_at: now,
-      updated_at: now
-    },
-    {
-      id: 9203,
-      title: "Сабакта колдонулуучу интерактивдүү тапшырмалар",
-      slug: "demo-lesson-classroom-tasks",
-      material_type: "methodical",
-      excerpt:
-        "Мугалимдер үчүн окуучуларды активдүү катыштырууга жардам берген тапшырмалар.",
-      content: "",
-      cover_image: null,
-      attachment: null,
-      is_published: true,
-      published_at: "2026-01-08T15:00:00+06:00",
-      created_at: now,
-      updated_at: now
-    },
-    {
-      id: 9204,
-      title: "Окуу текстин талдоо ыкмалары",
-      slug: "demo-lesson-reading-analysis",
-      material_type: "lesson",
-      excerpt:
-        "Текст менен иштөө, негизги ойду табуу жана суроо түзүү боюнча демо материал.",
-      content: "",
-      cover_image: null,
-      attachment: null,
-      is_published: true,
-      published_at: "2026-01-06T10:45:00+06:00",
-      created_at: now,
-      updated_at: now
-    }
+    // {
+    //   id: 9202,
+    //   title: "Орфография: көп колдонулган эрежелер",
+    //   slug: "demo-lesson-orthography",
+    //   material_type: "article",
+    //   excerpt:
+    //     "Жазууда көп кездешкен суроолорго жөнөкөй жооптор жана мисалдар.",
+    //   content: "",
+    //   cover_image: null,
+    //   attachment: null,
+    //   is_published: true,
+    //   published_at: "2026-01-11T12:00:00+06:00",
+    //   created_at: now,
+    //   updated_at: now
+    // },
+    // {
+    //   id: 9203,
+    //   title: "Сабакта колдонулуучу интерактивдүү тапшырмалар",
+    //   slug: "demo-lesson-classroom-tasks",
+    //   material_type: "methodical",
+    //   excerpt:
+    //     "Мугалимдер үчүн окуучуларды активдүү катыштырууга жардам берген тапшырмалар.",
+    //   content: "",
+    //   cover_image: null,
+    //   attachment: null,
+    //   is_published: true,
+    //   published_at: "2026-01-08T15:00:00+06:00",
+    //   created_at: now,
+    //   updated_at: now
+    // },
+    // {
+    //   id: 9204,
+    //   title: "Окуу текстин талдоо ыкмалары",
+    //   slug: "demo-lesson-reading-analysis",
+    //   material_type: "lesson",
+    //   excerpt:
+    //     "Текст менен иштөө, негизги ойду табуу жана суроо түзүү боюнча демо материал.",
+    //   content: "",
+    //   cover_image: null,
+    //   attachment: null,
+    //   is_published: true,
+    //   published_at: "2026-01-06T10:45:00+06:00",
+    //   created_at: now,
+    //   updated_at: now
+    // }
   ],
   podcasts: [
     {
