@@ -12,7 +12,7 @@ import { PageHeader } from "../components/common/PageHeader";
 import { Seo } from "../components/common/Seo";
 import { Tag } from "../components/common/Tag";
 import { RichTextRenderer } from "../components/media/RichTextRenderer";
-import { getLessonDetail, lessonKeys } from "../lib/api/lessons.api";
+import { getLessonDetail, getLessonDownloadUrl, lessonKeys } from "../lib/api/lessons.api";
 import { resolveMediaUrl } from "../lib/api/helpers";
 import { materialTypeLabels } from "../lib/constants/materialTypes";
 import { PdfViewer } from "../components/media/PdfViewer";
@@ -39,7 +39,7 @@ export default function LessonDetailPage() {
 
   const item = query.data;
   const attachment = resolveMediaUrl(item.attachment);
-  const isPdf = attachment?.toLocaleLowerCase().includes(".pdf");
+  const isPdf = item.attachment?.endsWith(".pdf");
 
   return (
     <>
@@ -78,7 +78,7 @@ export default function LessonDetailPage() {
             <div className="grid-gap-8">
               {attachment ? (
                 isPdf ? (
-                  <PdfViewer file={attachment} title={item.title} />
+                  <PdfViewer file={attachment} title={item.title} downloadUrl={getLessonDownloadUrl(item.slug)}/>
                 ) : (
                   <a
                     className="focus-ring inline-flex min-h-11 items-center justify-center gap-2 rounded-md border border-brand bg-brand px-4 text-sm font-semibold text-white transition-colors hover:border-brand-hover hover:bg-brand-hover"

@@ -22,3 +22,7 @@ export function getLessons(params: LessonParams = {}) {
 export function getLessonDetail(slug: string) {
   return getDetail<EducationalMaterial>(endpoints.education, slug);
 }
+
+export function getLessonDownloadUrl(slug: string) {
+  return `/api/v1${endpoints.education}${slug}/download/`;
+}

@@ -23,3 +23,7 @@ export function getNewspapers(params: NewspaperParams = {}) {
 export function getNewspaperDetail(slug: string) {
   return getDetail<NewspaperIssue>(endpoints.newspapers, slug);
 }
+
+export function getNewspaperDownloadUrl(slug: string) {
+  return `/api/v1${endpoints.newspapers}${slug}/download/`;
+}

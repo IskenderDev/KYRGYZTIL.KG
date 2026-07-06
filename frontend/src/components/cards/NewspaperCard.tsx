@@ -6,14 +6,13 @@ import { Card } from "../common/Card";
 import { ContentMeta } from "../common/ContentMeta";
 import { ImageWithFallback } from "../common/ImageWithFallback";
 import type { NewspaperIssue } from "../../types/content";
-import { resolveMediaUrl } from "../../lib/api/helpers";
+import { getNewspaperDownloadUrl } from "../../lib/api/newspapers.api";
 
 interface NewspaperCardProps {
   item: NewspaperIssue;
 }
 
 export function NewspaperCard({ item }: NewspaperCardProps) {
-  const pdfUrl = resolveMediaUrl(item.pdf_file);
 
   return (
     <Card className="grid gap-5 overflow-hidden p-4 sm:grid-cols-[150px_1fr]">
@@ -35,17 +34,21 @@ export function NewspaperCard({ item }: NewspaperCardProps) {
           <ButtonLink to={`/newspapers/${item.slug}`} variant="secondary" icon={<Newspaper aria-hidden className="h-4 w-4" />}>
             Окуу
           </ButtonLink>
-          {pdfUrl ? (
+          {item.pdf_file ? (
             <a
               className="focus-ring inline-flex min-h-11 items-center justify-center gap-2 rounded-md border border-brand bg-brand px-4 text-sm font-semibold text-white transition-colors hover:border-brand-hover hover:bg-brand-hover"
-              href={pdfUrl}
+              href={getNewspaperDownloadUrl(item.slug)}
               rel="noopener noreferrer"
-              target="_blank"
+              download
             >
               <Download aria-hidden className="h-4 w-4" />
               PDF жүктөө
             </a>
-          ) : null}
+          ) : (
+            <div className="p-5 text-sm text-ink-soft">
+          PDF файл азырынча жеткиликтүү эмес.
+        </div>
+          )}
         </div>
       </div>
     </Card>

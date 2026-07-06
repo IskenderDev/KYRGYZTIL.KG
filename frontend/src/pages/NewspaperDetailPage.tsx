@@ -12,7 +12,7 @@ import { PageHeader } from "../components/common/PageHeader";
 import { Seo } from "../components/common/Seo";
 import { RichTextRenderer } from "../components/media/RichTextRenderer";
 import { PdfViewer } from "../components/media/PdfViewer";
-import { getNewspaperDetail, newspaperKeys } from "../lib/api/newspapers.api";
+import { getNewspaperDetail, getNewspaperDownloadUrl, newspaperKeys } from "../lib/api/newspapers.api";
 
 export default function NewspaperDetailPage() {
   const { slug = "" } = useParams();
@@ -59,7 +59,7 @@ export default function NewspaperDetailPage() {
           </aside>
           <div className="grid gap-8">
             {item.description ? <RichTextRenderer content={item.description} className="rich-text max-w-3xl" /> : null}
-            <PdfViewer file={item.pdf_file} title={item.title} />
+            <PdfViewer file={item.pdf_file} downloadUrl={getNewspaperDownloadUrl(item.slug)} title={item.title} />
             <ButtonLink to="/newspapers" variant="secondary" icon={<ArrowLeft aria-hidden className="h-4 w-4" />}>
               Чыгарылыштарга кайтуу
             </ButtonLink>

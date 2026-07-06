@@ -3,33 +3,34 @@ import { Button } from "../common/Button";
 import { resolveMediaUrl } from "../../lib/api/helpers";
 interface PdfViewerProps {
   file: string | null;
+  downloadUrl?: string | null;
   title: string;
 }
-export function PdfViewer({ file, title }: PdfViewerProps) {
+export function PdfViewer({ file, downloadUrl, title }: PdfViewerProps) {
   const url = file ? resolveMediaUrl(file) : null;
   return (
     <div className="rounded-lg border border-border bg-white">
       <div className="flex flex-col gap-3 border-b border-border p-4 sm:flex-row sm:items-center sm:justify-between">
         <h2 className="text-lg font-semibold text-ink">PDF</h2>
-        {url && (
+        {url && downloadUrl && (
           <div className="flex flex-wrap gap-2">
-            <Button
-              rel="noopener noreferrer"
-              variant="secondary"
-              icon={<ExternalLink aria-hidden className="h-4 w-4" />}
-            >
-              <a href={url} target="_blank">
+            <a href={url} target="_blank">
+              <Button
+                rel="noopener noreferrer"
+                variant="secondary"
+                icon={<ExternalLink aria-hidden className="h-4 w-4" />}
+              >
                 Ачуу
-              </a>
-            </Button>
-            <Button
-              rel="noopener noreferrer"
-              icon={<Download aria-hidden className="h-4 w-4" />}
-            >
-              <a href={url} target="_blank">
+              </Button>
+            </a>
+            <a href={downloadUrl} target="_blank" download={downloadUrl}>
+              <Button
+                rel="noopener noreferrer"
+                icon={<Download aria-hidden className="h-4 w-4" />}
+              >
                 PDF жүктөө
-              </a>
-            </Button>
+              </Button>
+            </a>
           </div>
         )}
       </div>
