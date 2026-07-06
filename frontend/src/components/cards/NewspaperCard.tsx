@@ -13,9 +13,8 @@ interface NewspaperCardProps {
 }
 
 export function NewspaperCard({ item }: NewspaperCardProps) {
-
   return (
-    <Card className="grid gap-5 overflow-hidden p-4 sm:grid-cols-[150px_1fr]">
+    <Card className="group grid gap-5 overflow-hidden p-4 sm:grid-cols-[150px_1fr] transition-colors hover:border-brand">
       <ImageWithFallback
         src={item.cover_image}
         alt={item.title}
@@ -23,15 +22,29 @@ export function NewspaperCard({ item }: NewspaperCardProps) {
         className="aspect-[3/4] rounded-md"
       />
       <div className="flex flex-col">
-        <ContentMeta date={item.published_at} extra={<span>№ {item.issue_number}</span>} />
+        <ContentMeta
+          date={item.published_at}
+          extra={<span>№ {item.issue_number}</span>}
+        />
         <h2 className="mt-3 text-xl font-semibold leading-snug text-ink">
-          <Link className="focus-ring rounded-sm hover:text-brand" to={`/newspapers/${item.slug}`}>
+          <Link
+            className="focus-ring rounded-sm group-hover:text-brand"
+            to={`/newspapers/${item.slug}`}
+          >
             {item.title}
           </Link>
         </h2>
-        {item.description ? <p className="mt-3 line-clamp-3 text-sm leading-6 text-ink-soft">{item.description}</p> : null}
+        {item.description ? (
+          <p className="mt-3 line-clamp-3 text-sm leading-6 text-ink-soft">
+            {item.description}
+          </p>
+        ) : null}
         <div className="mt-auto flex flex-wrap gap-2 pt-5">
-          <ButtonLink to={`/newspapers/${item.slug}`} variant="secondary" icon={<Newspaper aria-hidden className="h-4 w-4" />}>
+          <ButtonLink
+            to={`/newspapers/${item.slug}`}
+            variant="secondary"
+            icon={<Newspaper aria-hidden className="h-4 w-4" />}
+          >
             Окуу
           </ButtonLink>
           {item.pdf_file ? (
@@ -46,8 +59,8 @@ export function NewspaperCard({ item }: NewspaperCardProps) {
             </a>
           ) : (
             <div className="p-5 text-sm text-ink-soft">
-          PDF файл азырынча жеткиликтүү эмес.
-        </div>
+              PDF файл азырынча жеткиликтүү эмес.
+            </div>
           )}
         </div>
       </div>
